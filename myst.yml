@@ -2,14 +2,18 @@
 version: 1
 project:
   id: 674e2dc4-be9a-47cf-b57d-5b3b55db11fb
-  # title:
+   title: Cuadernos Jupyter
   # description:
   # keywords: []
-  # authors: []
+  authors: noeliaprimor@gmail.com
   # github:
+  toc:
+    - file: index.md
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
+  options:
+    base_url: /notebooks/
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
