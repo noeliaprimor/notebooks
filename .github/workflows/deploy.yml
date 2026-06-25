@@ -34,6 +34,8 @@ jobs:
           pip install jupyter-book
 
       - name: Build site
+        env:
+          BASE_URL: /notebooks
         run: |
           jupyter-book build --html
           echo "Carpetas generadas:"
@@ -63,4 +65,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
