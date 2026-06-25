@@ -1,2 +1,5 @@
 _build/
 .idea/
+
+# MyST build outputs
+_build

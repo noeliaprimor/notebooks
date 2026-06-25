@@ -9,6 +9,7 @@ project:
   # github:
   toc:
     - file: index.md
+    - file: notebooks/Ejercicio1/M2T1.ipynb
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
