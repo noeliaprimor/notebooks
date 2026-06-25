@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 674e2dc4-be9a-47cf-b57d-5b3b55db11fb
-   title: Cuadernos Jupyter
+  title: Cuadernos Jupyter
   # description:
   # keywords: []
   authors: noeliaprimor@gmail.com
