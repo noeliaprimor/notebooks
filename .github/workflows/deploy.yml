@@ -35,13 +35,32 @@ jobs:
 
       - name: Build site
         run: |
-          jupyter-book build
+          jupyter-book build --html
+          echo "Carpetas generadas:"
+          find . -maxdepth 4 -type d | sort
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p public
+          if [ -d "_build/html" ]; then
+            cp -R _build/html/* public/
+          elif [ -d "_build/site" ]; then
+            cp -R _build/site/* public/
+          elif [ -d "_build" ]; then
+            cp -R _build/* public/
+          else
+            echo "No se encontró carpeta _build"
+            exit 1
+          fi
+          echo "Contenido de public:"
+          find public -maxdepth 3 -type f | head -50
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/html
+          path: public
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
